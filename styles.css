@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid
+  background-color: hsl(0, 0%, 95%);
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+
+.btn {
+  background-color: hsl(0, 0%, 95%);
+  text-decoration: none;
+  border-radius: 25px;
+  height: 50px;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-box > .btn {
+  color: hsl(31, 77%, 52%);
+}
+
+.second-box > .btn {
+  color: hsl(184, 100%, 22%);
+}
+
+.third-box > .btn {
+  color: hsl(179, 100%, 13%);
+}
+
+h2 {
+  color: hsl(0, 0%, 95%);
+  margin: 0;
+
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-top: 0;
+  line-height: 1.5em;
+
+}
+
+img {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 500px;
+  width: 60%;
+  margin: auto;
+}
+
+.container {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+padding: 10px;
+}
+
+.boxes {
+  display: grid;
+  padding: 40px 50px;
+}
+
+div .first-box {
+  background-color: hsl(31, 77%, 52%);
+}
+
+div .second-box {
+  background-color: hsl(184, 100%, 22%);
+}
+
+div .third-box {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  margin-top: 30px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+}
+
+.boxes a:active {
+  background-color: inherit;
+  color: white;
+  border: 2px solid white;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+    flex-direction: repeat (autofit, minmax(100px, 1fr));
+  }
+
+  .boxes {
+    padding: 20px 30px;
+  }
+
+}
+
+@media (max-width: 781px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+  }
+
+}
+
+
+/*sort out buttons onclick and center the main container*/
